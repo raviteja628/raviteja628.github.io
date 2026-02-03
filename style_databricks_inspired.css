@@ -2,14 +2,14 @@
 body {
     margin: 0;
     font-family: "Inter", sans-serif;
-    background: #F6F7F9;
-    color: #1A1A1A;
+    background: #F7F8FA;
+    color: #1F1F1F;
     transition: background 0.3s, color 0.3s;
 }
 
 /* Dark Mode */
 .dark-mode {
-    background: #0E0E0E;
+    background: #0F0F0F;
     color: #EEE;
 }
 
@@ -19,7 +19,7 @@ body {
     right: 20px;
     padding: 10px;
     border: none;
-    background: #FF5F3A;
+    background: #FF6A3D;
     color: #fff;
     border-radius: 50%;
     cursor: pointer;
@@ -27,7 +27,7 @@ body {
 }
 
 .dark-mode #darkToggle {
-    background: #23C7B8;
+    background: #2EC4B6;
 }
 
 /* Hero */
@@ -46,12 +46,12 @@ body {
 .logo {
     font-weight: 700;
     letter-spacing: 2px;
-    color: #FF5F3A;
+    color: #FF6A3D;
     margin-bottom: 10px;
 }
 
 .dark-mode .logo {
-    color: #23C7B8;
+    color: #2EC4B6;
 }
 
 nav a {
@@ -62,11 +62,11 @@ nav a {
 }
 
 nav a:hover {
-    color: #FF5F3A;
+    color: #FF6A3D;
 }
 
 .dark-mode nav a:hover {
-    color: #23C7B8;
+    color: #2EC4B6;
 }
 
 /* Sections */
@@ -81,7 +81,7 @@ nav a:hover {
 }
 
 .dark-mode .section {
-    background: #1B1B1B;
+    background: #1A1A1A;
     box-shadow: none;
 }
 
@@ -99,7 +99,7 @@ nav a:hover {
     background: #FFFFFF;
     border-radius: 14px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-    border-left: 5px solid #FF5F3A;
+    border-left: 5px solid #FF6A3D;
     transition: transform 0.2s, background 0.3s;
 }
 
@@ -108,27 +108,27 @@ nav a:hover {
 }
 
 .dark-mode .card {
-    background: #1B1B1B;
-    border-left: 5px solid #23C7B8;
+    background: #1A1A1A;
+    border-left: 5px solid #2EC4B6;
 }
 
 /* Timeline */
 .timeline {
-    border-left: 3px solid #FF5F3A;
+    border-left: 3px solid #FF6A3D;
     padding-left: 20px;
 }
 
 .dark-mode .timeline {
-    border-left: 3px solid #23C7B8;
+    border-left: 3px solid #2EC4B6;
 }
 
 .year {
     font-weight: bold;
-    color: #FF5F3A;
+    color: #FF6A3D;
 }
 
 .dark-mode .year {
-    color: #23C7B8;
+    color: #2EC4B6;
 }
 
 /* Blog */
@@ -149,16 +149,15 @@ nav a:hover {
 .contact-form button {
     padding: 12px 20px;
     border: none;
-    background: #FF5F3A;
+    background: #FF6A3D;
     color: #fff;
     border-radius: 8px;
     cursor: pointer;
 }
 
 .dark-mode .contact-form button {
-    background: #23C7B8;
+    background: #2EC4B6;
 }
-
 /* Tech Stack Grid */
 .tech-grid {
     display: grid;
@@ -186,7 +185,7 @@ nav a:hover {
 .cv-button {
     display: inline-block;
     padding: 12px 20px;
-    background: #FF5F3A;
+    background: #FF6A3D;
     color: white;
     border-radius: 8px;
     text-decoration: none;
@@ -194,10 +193,104 @@ nav a:hover {
 }
 
 .dark-mode .cv-button {
-    background: #23C7B8;
+    background: #2EC4B6;
 }
 
-/* Horizontal Floating Navigation */
+/* Floating Sidebar
+.sidebar {
+    position: fixed;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 1000;
+}
+
+.sidebar a {
+    text-decoration: none;
+    padding: 10px 14px;
+    background: #FFFFFF;
+    border-radius: 8px;
+    color: #1F1F1F;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: background 0.3s, transform 0.2s;
+}
+
+.sidebar a:hover {
+    background: #FF6A3D;
+    color: white;
+    transform: translateX(4px);
+}
+
+.dark-mode .sidebar a {
+    background: #1A1A1A;
+    color: #EEE;
+}
+
+.dark-mode .sidebar a:hover {
+    background: #2EC4B6;
+    color: #000;
+}
+
+/* Lakehouse Diagram *//*
+.lakehouse-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.lakehouse-layer {
+    width: 70%;
+    padding: 25px;
+    border-radius: 14px;
+    text-align: center;
+    color: white;
+    font-weight: 600;
+    animation: floatPulse 3s infinite ease-in-out;
+}
+
+.bronze {
+    background: #B87333;
+}
+
+.silver {
+    background: #C0C0C0;
+}
+
+.gold {
+    background: #FFB300;
+}
+
+.arrow {
+    font-size: 2rem;
+    animation: arrowBounce 1.5s infinite;
+}
+
+/* Animations *//*
+@keyframes floatPulse {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes arrowBounce {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(6px); }
+    100% { transform: translateY(0); }
+}
+
+/* Dark Mode Lakehouse *//*
+.dark-mode .bronze { background: #8A4F2B; }
+.dark-mode .silver { background: #A8A8A8; }
+.dark-mode .gold { background: #D49A00; }
+
+
+/* Horizontal Floating Navigation *//*
 .floating-nav {
     position: fixed;
     top: 0;
@@ -215,7 +308,7 @@ nav a:hover {
 
 .floating-nav a {
     text-decoration: none;
-    color: #1A1A1A;
+    color: #1F1F1F;
     font-weight: 600;
     padding: 6px 10px;
     border-radius: 6px;
@@ -223,10 +316,11 @@ nav a:hover {
 }
 
 .floating-nav a:hover {
-    background: #FF5F3A;
+    background: #FF6A3D;
     color: white;
 }
 
+/* Dark Mode *//*
 .dark-mode .floating-nav {
     background: rgba(20,20,20,0.85);
 }
@@ -236,16 +330,17 @@ nav a:hover {
 }
 
 .dark-mode .floating-nav a:hover {
-    background: #23C7B8;
+    background: #2EC4B6;
     color: #000;
 }
 
-/* Add top padding so content doesn't hide behind nav */
+/* Add top padding so content doesn't hide behind nav *//*
 body {
     padding-top: 80px;
 }
+ */
 
-.tech-icon {
+ .tech-icon {
     font-size: 48px;
-    color: #FF5F3A;
+    color: #FF6A3D; /* Databricks-inspired accent */
 }

@@ -5,9 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ravi | Systems in Motion</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 
 <body>
+    <!-- <div class="floating-nav">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#techstack">Tech Stack</a>
+        <a href="#projects">Projects</a>
+        <a href="#timeline">Timeline</a>
+        <a href="#lakehouse">Lakehouse</a>
+        <a href="#blog">Blog</a>
+        <a href="#cv">CV</a>
+        <a href="#contact">Contact</a>
+    </div> -->
+
 
     <!-- Dark Mode Toggle -->
     <button id="darkToggle">🌙</button>
@@ -42,6 +56,55 @@
             <li>Mentored teams, simplified architectures, and guided customers through ambiguity.</li>
         </ul>
     </section>
+    <section id="techstack" class="section">
+    <h2>Tech Stack</h2>
+    <div class="tech-grid">
+
+        <!-- <div class="tech-item">
+            <img src="https://github.com/devicons/devicon/tree/v2.17.0/icons/databricks/databricks-original.svg" alt="Databricks">
+            <p>Databricks</p>
+        </div> -->
+        <!-- <div class="tech-item">
+            <svg width="50" height="50" viewBox="0 0 100 100">
+            <rect x="10" y="10" width="80" height="20" rx="4" fill="#FF6A3D"/>
+            <rect x="10" y="40" width="80" height="20" rx="4" fill="#2EC4B6"/>
+            <rect x="10" y="70" width="80" height="20" rx="4" fill="#1F1F1F"/>
+            </svg>
+        <p>Databricks</p>
+    </div> -->
+        <div class="tech-item">
+            <i class="fas fa-database tech-icon"></i>
+            <p>Databricks</p>
+        </div>
+
+
+        <div class="tech-item">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt="Azure">
+            <p>Azure</p>
+        </div>
+
+        <div class="tech-item">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachekafka/apachekafka-original.svg" alt="Kafka">
+            <p>Kafka</p>
+        </div>
+
+        <div class="tech-item">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+            <p>Python</p>
+        </div>
+
+        <div class="tech-item">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker">
+            <p>Docker</p>
+        </div>
+
+        <div class="tech-item">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
+            <p>Git</p>
+        </div>
+
+    </div>
+</section>
 
     <section id="projects" class="section">
         <h2>Projects</h2>
@@ -64,6 +127,32 @@
 
         </div>
     </section>
+    <!-- <section id="lakehouse" class="section">
+        <h2>Lakehouse Architecture (Animated)</h2>
+
+        <div class="lakehouse-container">
+
+            <div class="lakehouse-layer bronze">
+                <h3>Bronze</h3>
+                <p>Raw data • Ingestion • Streaming</p>
+            </div>
+
+            <div class="arrow">⬇</div>
+
+            <div class="lakehouse-layer silver">
+                <h3>Silver</h3>
+                <p>Cleaned • Normalized • Enriched</p>
+            </div>
+
+            <div class="arrow">⬇</div>
+
+            <div class="lakehouse-layer gold">
+                <h3>Gold</h3>
+                <p>Business-ready • Aggregated • ML Features</p>
+            </div>
+
+        </div>
+    </section> -->
 
     <section id="timeline" class="section">
         <h2>Career Timeline</h2>
@@ -93,15 +182,18 @@
     </section>
 
     <section id="blog" class="section">
-        <h2>Blog</h2>
-        <p>Thoughts on data, AI, GenAI, and building systems with intention.</p>
+    <h2>Blog</h2>
+    <input type="text" id="blogSearch" placeholder="Search blog posts..." class="search-bar">
 
-        <ul class="blog-list">
-            <li><strong>The Future of AI is Hybrid</strong> — Why structured data + vector intelligence is the next frontier.</li>
-            <li><strong>Clarity in Complexity</strong> — How calm systems thinking transforms engineering teams.</li>
-            <li><strong>GenAI in the Enterprise</strong> — Practical patterns that actually work.</li>
-        </ul>
-    </section>
+    <ul id="blogList" class="blog-list">
+        <li><strong>The Future of AI is Hybrid</strong> — Why structured data + vector intelligence is the next frontier.</li>
+        <li><strong>Clarity in Complexity</strong> — How calm systems thinking transforms engineering teams.</li>
+        <li><strong>GenAI in the Enterprise</strong> — Practical patterns that actually work.</li>
+        <li><strong>Building Trust with Data</strong> — Why governance and empathy matter.</li>
+        <li><strong>Streaming Done Right</strong> — Lessons from real‑world Kafka pipelines.</li>
+    </ul>
+</section>
+
 
     <section id="contact" class="section">
         <h2>Contact Me</h2>
@@ -112,6 +204,11 @@
             <button type="submit">Send</button>
         </form>
     </section>
+    <section id="cv" class="section">
+    <h2>Download My CV</h2>
+    <p>You can download my latest CV below.</p>
+    <a href="Ravi_CV.pdf" download class="cv-button">Download CV</a>
+</section>
 
     <footer>
         <p>© 2026 Ravi • Built with clarity, intention, and curiosity.</p>
