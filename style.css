@@ -5,6 +5,7 @@ body {
     background: #F6F7F9;
     color: #1A1A1A;
     transition: background 0.3s, color 0.3s;
+    padding-top: 80px; /* space for floating nav */
 }
 
 /* Dark Mode */
@@ -24,10 +25,54 @@ body {
     border-radius: 50%;
     cursor: pointer;
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    z-index: 2000;
 }
 
 .dark-mode #darkToggle {
     background: #23C7B8;
+}
+
+/* Floating Navigation */
+.floating-nav {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 18px;
+    padding: 12px 20px;
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    z-index: 1500;
+}
+
+.floating-nav a {
+    text-decoration: none;
+    color: #1A1A1A;
+    font-weight: 600;
+    padding: 6px 10px;
+    border-radius: 6px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.floating-nav a:hover {
+    background: #FF5F3A;
+    color: white;
+}
+
+.dark-mode .floating-nav {
+    background: rgba(20,20,20,0.85);
+}
+
+.dark-mode .floating-nav a {
+    color: #EEE;
+}
+
+.dark-mode .floating-nav a:hover {
+    background: #23C7B8;
+    color: #000;
 }
 
 /* Hero */
@@ -54,19 +99,41 @@ body {
     color: #23C7B8;
 }
 
-nav a {
-    margin: 0 15px;
-    text-decoration: none;
-    color: inherit;
+/* Profile Picture */
+.profile-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.profile-pic {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #FF5F3A, #23C7B8);
+    background-size: cover;
+    background-position: center;
+    animation: floatPic 4s infinite ease-in-out;
+}
+
+@keyframes floatPic {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0); }
+}
+
+/* Typing Text */
+.typing-text {
+    font-size: 1.6rem;
     font-weight: 600;
-}
-
-nav a:hover {
-    color: #FF5F3A;
-}
-
-.dark-mode nav a:hover {
-    color: #23C7B8;
+    margin: 0 auto;
+    width: fit-content;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid #FF5F3A;
+    background-image: linear-gradient(90deg, #FF5F3A, #23C7B8);
+    background-clip: text;
+    color: transparent;
 }
 
 /* Sections */
@@ -131,11 +198,54 @@ nav a:hover {
     color: #23C7B8;
 }
 
-/* Blog */
-.blog-list li {
-    margin-bottom: 12px;
+.client-badge {
+    display: inline-block;
+    background: #FF5F3A;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 6px;
+    margin-right: 6px;
+    font-size: 0.85rem;
 }
 
+.dark-mode .client-badge {
+    background: #23C7B8;
+    color: #000;
+}
+
+/* Tech Grid */
+/* .tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+    text-align: center;
+} */
+
+/* .tech-item img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 8px;
+} */
+
+/* Tech Stack Grid */
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+    text-align: center;
+}
+
+.tech-item img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 8px;
+}
+
+
+.tech-icon {
+    font-size: 48px;
+    color: #FF5F3A;
+}
 /* Contact Form */
 .contact-form input,
 .contact-form textarea {
@@ -159,29 +269,6 @@ nav a:hover {
     background: #23C7B8;
 }
 
-/* Tech Stack Grid */
-.tech-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 20px;
-    text-align: center;
-}
-
-.tech-item img {
-    width: 50px;
-    height: 50px;
-    margin-bottom: 8px;
-}
-
-/* Blog Search Bar */
-.search-bar {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-}
-
 /* CV Button */
 .cv-button {
     display: inline-block;
@@ -197,156 +284,7 @@ nav a:hover {
     background: #23C7B8;
 }
 
-/* Horizontal Floating Navigation */
-.floating-nav {
-    position: fixed;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 18px;
-    padding: 12px 20px;
-    background: rgba(255,255,255,0.85);
-    backdrop-filter: blur(10px);
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-    z-index: 2000;
-}
-
-.floating-nav a {
-    text-decoration: none;
-    color: #1A1A1A;
-    font-weight: 600;
-    padding: 6px 10px;
-    border-radius: 6px;
-    transition: background 0.3s, color 0.3s;
-}
-
-.floating-nav a:hover {
-    background: #FF5F3A;
-    color: white;
-}
-
-.dark-mode .floating-nav {
-    background: rgba(20,20,20,0.85);
-}
-
-.dark-mode .floating-nav a {
-    color: #EEE;
-}
-
-.dark-mode .floating-nav a:hover {
-    background: #23C7B8;
-    color: #000;
-}
-
-/* Add top padding so content doesn't hide behind nav */
-body {
-    padding-top: 80px;
-}
-
-.tech-icon {
-    font-size: 48px;
-    color: #FF5F3A;
-}
-
-
-/* Profile Picture */
-.profile-container {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-
-.profile-pic {
-    width: 140px;
-    height: 140px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #FF5F3A, #23C7B8);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 48px;
-    font-weight: 700;
-    color: white;
-    animation: floatPic 4s infinite ease-in-out;
-    background-size: cover;
-    background-position: center;
-}
-
-/* Floating animation */
-@keyframes floatPic {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-8px); }
-    100% { transform: translateY(0); }
-}
-
-/* Hover Bio Card */
-.bio-card {
-    width: 100%;
-    max-width: 500px;
-    height: 180px;
-    margin: 20px auto;
-    perspective: 1000px;
-}
-
-.bio-card > div {
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    position: absolute;
-    backface-visibility: hidden;
-    transition: transform 0.6s;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-}
-
-.bio-front {
-    background: #FF5F3A;
-    color: white;
-    font-weight: 700;
-}
-
-.bio-back {
-    background: #23C7B8;
-    color: #000;
-    transform: rotateY(180deg);
-}
-
-.bio-card:hover .bio-front {
-    transform: rotateY(180deg);
-}
-
-.bio-card:hover .bio-back {
-    transform: rotateY(360deg);
-}
-
-/* Typing Animation
-.typing-text {
-    font-size: 1.6rem;
-    font-weight: 600;
-    height: 40px;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 3px solid #FF5F3A;
-    animation: typing 4s steps(40) infinite, blink 0.7s infinite;
-}
-
-@keyframes typing {
-    0% { width: 0 }
-    50% { width: 100% }
-    100% { width: 0 }
-}
-
-@keyframes blink {
-    0%, 100% { border-color: transparent }
-    50% { border-color: #FF5F3A }
-}
-
-
-/* Scroll Fade-In *//*
+/* Scroll Fade-In */
 .fade-section {
     opacity: 0;
     transform: translateY(20px);
@@ -356,78 +294,4 @@ body {
 .fade-section.visible {
     opacity: 1;
     transform: translateY(0);
-} */
-
-/* Typing Animation (Centered + Slower) *//*
-.typing-text {
-    font-size: 1.6rem;
-    font-weight: 600;
-    margin: 0 auto;
-    width: fit-content;          /* keeps text centered *//*
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 3px solid #FF5F3A;
-    animation: typing 6s steps(40) infinite, blink 0.8s infinite;
-    text-align: center;
 }
-
-/* Slower typing *//*
-@keyframes typing {
-    0% { width: 0 }
-    50% { width: 100% }
-    100% { width: 0 }
-}
-
-@keyframes blink {
-    0%, 100% { border-color: transparent }
-    50% { border-color: #FF5F3A }
-}
-
-/* Fade-in before typing starts *//*
-.typing-text {
-    opacity: 0;
-    animation: fadeIn 1.2s forwards;
-    animation-delay: 0.5s;
-}
-
-/* Typing Animation (Centered + Slower + Gradient Cursor) */
-.typing-text {
-    font-size: 1.6rem;
-    font-weight: 600;
-    margin: 0 auto;
-    width: fit-content;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 3px solid transparent;
-    background-image: linear-gradient(90deg, #FF5F3A, #23C7B8);
-    background-clip: text;
-    color: transparent;
-    animation: fadeIn 1.2s forwards, typing 6s steps(40) infinite, cursorBlink 0.8s infinite;
-    animation-delay: 0.5s, 1.2s, 1.2s;
-}
-
-/* Cursor blink with gradient */
-@keyframes cursorBlink {
-    0%, 100% { border-color: transparent; }
-    50% { border-color: #FF5F3A; }
-}
-
-/* Slower typing, stops at end */
-@keyframes typing {
-    0% { width: 0 }
-    50% { width: 100% }
-    100% { width: 100% }
-}
-
-/* Fade-in */
-/* @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(6px); }
-    to { opacity: 1; transform: translateY(0); }
-} */
-
-/* Sound toggle styling */
-/* .sound-toggle {
-    margin-top: 10px;
-    font-size: 0.9rem;
-    opacity: 0.7;
-} */

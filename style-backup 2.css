@@ -1,0 +1,404 @@
+/* Base */
+body {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    background: #F6F7F9;
+    color: #1A1A1A;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Dark Mode */
+.dark-mode {
+    background: #0E0E0E;
+    color: #EEE;
+}
+
+#darkToggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px;
+    border: none;
+    background: #FF5F3A;
+    color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.dark-mode #darkToggle {
+    background: #23C7B8;
+}
+
+/* Hero */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: rgba(255,255,255,0.7);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid #ddd;
+}
+
+.dark-mode .hero {
+    background: rgba(20,20,20,0.6);
+}
+
+.logo {
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #FF5F3A;
+    margin-bottom: 10px;
+}
+
+.dark-mode .logo {
+    color: #23C7B8;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: inherit;
+    font-weight: 600;
+}
+
+nav a:hover {
+    color: #FF5F3A;
+}
+
+.dark-mode nav a:hover {
+    color: #23C7B8;
+}
+
+/* Sections */
+.section {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 25px;
+    background: #FFFFFF;
+    border-radius: 14px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    transition: background 0.3s;
+}
+
+.dark-mode .section {
+    background: #1B1B1B;
+    box-shadow: none;
+}
+
+/* Cards */
+.card-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    flex: 1;
+    min-width: 260px;
+    padding: 20px;
+    background: #FFFFFF;
+    border-radius: 14px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    border-left: 5px solid #FF5F3A;
+    transition: transform 0.2s, background 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.dark-mode .card {
+    background: #1B1B1B;
+    border-left: 5px solid #23C7B8;
+}
+
+/* Timeline */
+.timeline {
+    border-left: 3px solid #FF5F3A;
+    padding-left: 20px;
+}
+
+.dark-mode .timeline {
+    border-left: 3px solid #23C7B8;
+}
+
+.year {
+    font-weight: bold;
+    color: #FF5F3A;
+}
+
+.dark-mode .year {
+    color: #23C7B8;
+}
+
+/* Blog */
+.blog-list li {
+    margin-bottom: 12px;
+}
+
+/* Contact Form */
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.contact-form button {
+    padding: 12px 20px;
+    border: none;
+    background: #FF5F3A;
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.dark-mode .contact-form button {
+    background: #23C7B8;
+}
+
+/* Tech Stack Grid */
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+    text-align: center;
+}
+
+.tech-item img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 8px;
+}
+
+/* Blog Search Bar */
+.search-bar {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+/* CV Button */
+.cv-button {
+    display: inline-block;
+    padding: 12px 20px;
+    background: #FF5F3A;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.dark-mode .cv-button {
+    background: #23C7B8;
+}
+
+/* Horizontal Floating Navigation */
+.floating-nav {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 18px;
+    padding: 12px 20px;
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    z-index: 2000;
+}
+
+.floating-nav a {
+    text-decoration: none;
+    color: #1A1A1A;
+    font-weight: 600;
+    padding: 6px 10px;
+    border-radius: 6px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.floating-nav a:hover {
+    background: #FF5F3A;
+    color: white;
+}
+
+.dark-mode .floating-nav {
+    background: rgba(20,20,20,0.85);
+}
+
+.dark-mode .floating-nav a {
+    color: #EEE;
+}
+
+.dark-mode .floating-nav a:hover {
+    background: #23C7B8;
+    color: #000;
+}
+
+/* Add top padding so content doesn't hide behind nav */
+body {
+    padding-top: 80px;
+}
+
+.tech-icon {
+    font-size: 48px;
+    color: #FF5F3A;
+}
+
+
+/* Profile Picture */
+.profile-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.profile-pic {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #FF5F3A, #23C7B8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
+    font-weight: 700;
+    color: white;
+    animation: floatPic 4s infinite ease-in-out;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Floating animation */
+@keyframes floatPic {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0); }
+}
+
+/* Hover Bio Card */
+.bio-card {
+    width: 100%;
+    max-width: 500px;
+    height: 180px;
+    margin: 20px auto;
+    perspective: 1000px;
+}
+
+.bio-card > div {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    position: absolute;
+    backface-visibility: hidden;
+    transition: transform 0.6s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.bio-front {
+    background: #FF5F3A;
+    color: white;
+    font-weight: 700;
+}
+
+.bio-back {
+    background: #23C7B8;
+    color: #000;
+    transform: rotateY(180deg);
+}
+
+.bio-card:hover .bio-front {
+    transform: rotateY(180deg);
+}
+
+.bio-card:hover .bio-back {
+    transform: rotateY(360deg);
+}
+
+
+/* Typing Animation (Centered + Slower + Gradient Cursor) */
+.typing-text {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin: 0 auto;
+    width: fit-content;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid transparent;
+    background-image: linear-gradient(90deg, #FF5F3A, #23C7B8);
+    background-clip: text;
+    color: transparent;
+    animation: fadeIn 1.2s forwards, typing 6s steps(40) infinite, cursorBlink 0.8s infinite;
+    animation-delay: 0.5s, 1.2s, 1.2s;
+}
+
+/* Cursor blink with gradient */
+/* @keyframes cursorBlink {
+    0%, 100% { border-color: transparent; }
+    50% { border-color: #FF5F3A; }
+} */
+
+/* Slower typing, stops at end */
+/* @keyframes typing {
+    0% { width: 0 }
+    50% { width: 100% }
+    100% { width: 100% }
+} */
+
+
+/* Typing Animation with black and starting at centre */
+/* .typing-text {
+    font-size: 1.6rem;
+    font-weight: 600;
+    height: 40px;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid #FF5F3A;
+    animation: typing 4s steps(40) infinite, blink 0.7s infinite;
+}
+
+@keyframes typing {
+    0% { width: 0 }
+    50% { width: 100% }
+    100% { width: 0 }
+}
+
+@keyframes blink {
+    0%, 100% { border-color: transparent }
+    50% { border-color: #FF5F3A }
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Scroll Fade-In */
+.fade-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
